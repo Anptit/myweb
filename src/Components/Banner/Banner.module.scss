@@ -1,0 +1,30 @@
+.banner {
+    background-color: #000;
+    height: 436px;
+}
+
+.banner-link {
+    display: block;
+    width: 675px;   
+    text-align: center;
+    padding-top: 8px;
+    margin: 0 auto;
+}
+
+.banner-caption {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 20px;
+    color: #FFFFFF;
+}
+
+.banner-caption-name {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.banner-caption-desc {
+    line-height: 24px;
+}

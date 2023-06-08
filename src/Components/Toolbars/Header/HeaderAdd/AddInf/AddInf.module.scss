@@ -1,0 +1,28 @@
+.inf {
+    height: 32px;
+    // background-color: var(--backGround-color);
+}
+
+.inf-item {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 65px;
+    line-height: 32px;
+    color: #555;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+        color: #c00;
+        background: #f9f9f9;
+    }
+}
+
+.inf-item-icon {
+    padding-left: 12px;
+}
+
+.inf-item-title {
+    padding-right: 10px;
+}

@@ -1,0 +1,138 @@
+.header-search-filter {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    top: 0px;
+    right: 8px;
+    cursor: pointer;
+}
+
+.spinner-container {
+    display:grid;
+    margin: 0 2px;
+}
+
+.spinner-icon {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #f3f3f3; /* Light grey */
+    border-top: 1px solid #383636; /* Blue */
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
+}
+
+@keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+.header-search-filter-title {
+    margin-left: 4px;
+    font-size: 12px;
+}
+
+.container {
+    position: absolute;
+    top: 40px;
+    right: -194px;
+    width: 650px;
+    height: 290px;
+    border: 1px solid #eee;
+    border-top: none;
+    background: #f9f9f9;
+    box-shadow: 1px 2px 6px rgba(0,0,0,.5);
+
+
+    &::after {
+        content: "";
+        position: relative;
+        background: url(https://www.foody.vn/Scripts/dropdown/arrow-top.png) no-repeat;
+        display: block;
+        width: 12px;
+        height: 8px;
+        top: -298px;
+        left: 434px;
+        z-index: 2;
+    }
+}
+
+.wrapper {
+    display: flex;
+    height: 230px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-list {
+    float: left;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-list-item {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+
+    &.active {
+        background-color: #fff;
+    }
+
+    &.active .filter-list-item-symbol {
+        display: none;
+    }
+}
+
+.filter-sublist {
+    height: 100%;
+    list-style: none;
+    padding: 10px;
+    margin: 0 0 0 4px;
+    background-color: #fff;
+    overflow-y: scroll;
+    flex: 1;
+}
+
+.filter-sublist-menu {
+   font-size: 14px;
+   font-weight: 600;
+   margin-bottom: 10px;
+}
+
+.filter-sublist-menu-checkbox {
+    margin-right: 2px ;
+}
+
+.filter-sublist-menu-title {
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+.filter-list-item-label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.filter-list-item-icon {
+    float: left;
+    margin-right: 2px;
+}
+
+.filter-list-item-title {
+    float: right;
+    margin-left: 2px;
+}
+
+.filter-list-item-symbol {
+    font-size: 8px;
+}
+
+

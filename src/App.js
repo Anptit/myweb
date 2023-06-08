@@ -1,28 +1,22 @@
-import Foods from "./Components/Foods";
-import classNames from "classnames/bind";
-import styles from "./Styles.module.scss"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import classnames from "classnames/bind";
+import styles from "./App.module.scss";
+import ToolbarsTop from "./Components/Toolbars/ToolbarsTop/ToolbarsTop";
+import Header from "./Components/Toolbars/Header/Header";
+import Banner from "./Components/Banner/Banner";
 
-var cx = classNames.bind(styles);
+var cx = classnames.bind(styles);
 
 function App() {
   return (
-    <div className="App">
-      <header className={cx('container')}>
-        <button className={cx('menu')}>
-          <FontAwesomeIcon icon={faBars} />
-        </button>
-        <div className={cx('header')}>
-          <h2>My Food</h2>
-        </div>
-        <div className={cx('mail')}>
-          <h2>Mail</h2>
-        </div>
+    <div className={cx("app")}>
+      <header className={cx("toolbars")}>
+        <ToolbarsTop />
+        <Header />
       </header>
-      <div>
-        <Foods />
-      </div>
+      <main>
+        <Banner />
+      </main>
+      <footer></footer>
     </div>
   );
 }
