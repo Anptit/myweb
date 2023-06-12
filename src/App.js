@@ -1,22 +1,18 @@
 import classnames from "classnames/bind";
 import styles from "./App.module.scss";
-import ToolbarsTop from "./Components/Toolbars/ToolbarsTop/ToolbarsTop";
-import Header from "./Components/Toolbars/Header/Header";
-import Banner from "./Components/Banner/Banner";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 var cx = classnames.bind(styles);
 
 function App() {
   return (
     <div className={cx("app")}>
-      <header className={cx("toolbars")}>
-        <ToolbarsTop />
-        <Header />
-      </header>
-      <main>
-        <Banner />
-      </main>
-      <footer></footer>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/about" element={<About/>} />
+      </Routes>
     </div>
   );
 }
